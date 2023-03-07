@@ -18,6 +18,11 @@ The example variables create an backup of the following repository: https://gith
 For more documentation about personal tokens see following url: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
 
 ### Usage
+Go the folder where you want to have the code and use the following command to download
+```
+wget --header="Accept:application/vnd.github.v3.raw" -O - https://api.github.com/repos/jorisros/ServerMaintenance/tarball/main | tar xz && mv jorisros-ServerMaintenance-* maintenance-script
+```
+Go into the dictory ``cd maintenance-script`` and change the environment variables
 ```
 cp .env_example .env
 ```
