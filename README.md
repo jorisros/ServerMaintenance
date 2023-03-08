@@ -30,3 +30,9 @@ Then update the content of the ``.env`` file and run the following command
 ```
 ./repository_backup.sh
 ```
+
+It is also possible to backup by arguments instead of from the ``.env`` file. Then the variables are overwritten what is been set in the ``.env``. You can call it by giving as the following command.
+```
+./repository_backup.sh jorisros nginxparser main
+```
+The token must be set by an environment variable.
