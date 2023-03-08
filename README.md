@@ -36,3 +36,14 @@ It is also possible to backup by arguments instead of from the ``.env`` file. Th
 ./repository_backup.sh jorisros nginxparser main
 ```
 The token must be set by an environment variable.
+
+### Usage in crontab
+Edit the contab with the following command
+```
+crontab -e
+```
+And add the following command, make sure that the frequency of running is correct. To get some help go to: https://crontab.guru or https://www.computerhope.com/unix/ucrontab.htm form more information.
+```
+0 */6 * * * /root/maintenance-script/mysql_backup.sh
+```
+Save the file and the cronjob wil run in the background.
